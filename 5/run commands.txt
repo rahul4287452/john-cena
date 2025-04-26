@@ -1,0 +1,11 @@
+run commands
+
+flex exp.l
+gcc -o exp lex.yy.c
+exp.exe exp.c
+
+add this at end of generated lex.yy.c
+
+int yywrap() {
+    return 1;  // End of input
+}
